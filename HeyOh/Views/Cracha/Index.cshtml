@@ -1,0 +1,40 @@
+﻿@model HeyOh.Models.Cracha
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+
+    <h2>1 - Criar Modelo</h2>
+    <!--uso de helper para formulário-->
+    @using (Html.BeginForm("CriarCrachas", "Cracha", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+        <label for="layout-cracha">
+            Selecionar layout
+        </label>
+        <canvas id="c" width="600" height="600"></canvas>
+        <input type="file" name="layoutCracha" id="layoutCracha" placeholder="Anexar Imagem de Fundo" />
+        <a href="https://blog.even3.com.br/crachas-para-eventos-academicos/" class="form-inline" target="_blank">Dica: Templates</a>
+        <br />
+
+        <img class="img-responsive" id="ver-cracha" width="300px" height="300px" />
+        <br />
+
+        <label for="layout-cracha">
+            Selecionar Logo do Evento
+        </label>
+        <input type="file" name="logoMarca" id="logoMarca" />
+        <br />
+        <img class="img-responsive" id="ver-logomarca" width="300px" height="300px" />
+        <br />
+
+        <h2>2 - Importar Participantes</h2>
+        <textarea cols="100" rows="15" name="participantes"></textarea>
+
+        <h2>3 - Baixar</h2>
+        <input type="submit" value="Baixar Crachás" class="btn btn-default" />
+        @ViewBag.Cracha;
+
+    }
+
+</div>

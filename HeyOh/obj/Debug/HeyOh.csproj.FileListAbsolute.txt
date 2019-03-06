@@ -85,3 +85,5 @@ C:\Users\Ramon\Documents\Even3 Test\HeyOh\HeyOh\obj\Debug\HeyOh.csproj.CoreCompi
 C:\Users\Ramon\Documents\Even3 Test\HeyOh\HeyOh\obj\Debug\HeyOh.csproj.CopyComplete
 C:\Users\Ramon\Documents\Even3 Test\HeyOh\HeyOh\obj\Debug\HeyOh.dll
 C:\Users\Ramon\Documents\Even3 Test\HeyOh\HeyOh\obj\Debug\HeyOh.pdb
+C:\Users\Ramon\Documents\Even3 Test\HeyOh\HeyOh\bin\itextsharp.dll
+C:\Users\Ramon\Documents\Even3 Test\HeyOh\HeyOh\bin\itextsharp.xml
