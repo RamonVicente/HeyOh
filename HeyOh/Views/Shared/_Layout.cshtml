@@ -15,10 +15,9 @@
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
-    @Scripts.Render("~/bundles/image-uploader")
-    @Scripts.Render("~/bundles/fabric")
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/2.4.6/fabric.js"></script>
     <script src="http://js.nicedit.com/nicEdit-latest.js" type="text/javascript"></script>
-    <script type="text/javascript">bkLib.onDomLoaded(nicEditors.allTextAreas);</script>
+    @Scripts.Render("~/bundles/cracha-app")
     @RenderSection("scripts", required: false)
 </body>
 </html>

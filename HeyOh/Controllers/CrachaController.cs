@@ -19,64 +19,89 @@ namespace HeyOh.Controllers
 
         [HttpPost]
         [ValidateInput(false)]
-        public ActionResult CriarCrachas(Cracha cracha){
+        public ActionResult CriarCrachas(Cracha cracha)
+        {
 
-            //salva imagem num diretório
-            if (cracha.layoutCracha != null){
+            if (cracha.layoutCracha != null && cracha.participantes != null)
+            {
 
-                //instancia o background do crachá e cria um path
-                var layoutCracha = cracha.layoutCracha;
-                var uploadPath = Server.MapPath("~/Content/Images");
-                string caminhoArquivo = Path.Combine(uploadPath, Path.GetFileName(layoutCracha.FileName));
+                var backgroundCracha = cracha.layoutCracha;
+                SalvarImagem(backgroundCracha);
 
-                //salva a imagem no diretório
-                layoutCracha.SaveAs(caminhoArquivo);
-                
+                var caminhoBackgroundCracha = PegarCaminhoImagem(backgroundCracha.FileName);
+
+                //tamanho do arquivo para memória
                 MemoryStream workStream = new MemoryStream();
 
+                //nome do pdf a ser criado
                 DateTime dTime = DateTime.Now;
-                string strPDFFileName = string.Format("Crachas" + dTime.ToString("yyyyMMddHHmmss"));
+                string nomeDocumentoPDF = string.Format("Crachas" + dTime.ToString("yyyyMMddHHmmss"));
 
-                Document documentoPDF = new Document(PageSize.A6);
+                //instância documento
+                Document documentoPDF = new Document();
                 documentoPDF.SetMargins(0f, 0f, 0f, 0f);
 
-                //file will created in this path  
-                string strAttachment = Server.MapPath("~/Content/PDFs/" + strPDFFileName);
+                //cria documento pdf
+                string strAttachment = Server.MapPath("~/Content/PDFs/" + nomeDocumentoPDF);
                 PdfWriter.GetInstance(documentoPDF, workStream).CloseStream = false;
 
+                //insere imagem e lista de participantes no pdf
                 documentoPDF.Open();
 
                 documentoPDF.Add(new Paragraph(cracha.participantes));
 
-                Image gif = Image.GetInstance(caminhoArquivo);
-                documentoPDF.Add(gif);
+                Image backgroundImagemCracha = Image.GetInstance(caminhoBackgroundCracha);
+                documentoPDF.Add(backgroundImagemCracha);
 
                 documentoPDF.Close();
 
+                //memória para inserir pdf
                 byte[] byteInfo = workStream.ToArray();
                 workStream.Write(byteInfo, 0, byteInfo.Length);
                 workStream.Position = 0;
 
-                return DownloadPDF(workStream, strPDFFileName);
+                //chama o arquivo pdf para baixar
+                return DownloadPDF(workStream, nomeDocumentoPDF);
 
-            } else {
+            }
+            else
+            {
 
-                return ViewBag.Cracha = "Não foi possível criar crachá. Verifique se os campos foram preenchidos.";
+                ViewBag.Cracha = "Não foi possível criar crachá.Verifique se os campos foram preenchidos.";
+                return View("Index");
             }
 
         }
 
-
-        [HttpPost]
-        [ValidateInput(false)]
-        public ActionResult retornaDados(Cracha cracha)
+        /// <summary>
+        /// Método usado para salvar o arquivo de imagem vinda do formulário
+        /// </summary>
+        /// <param name="imagemArquivo"></param>
+        public void SalvarImagem(HttpPostedFileBase imagemArquivo)
         {
-            string teste = cracha.participantes;
-            ViewBag.Cracha = teste;
-            return View("Index");
+            var caminhoImagem = PegarCaminhoImagem(imagemArquivo.FileName);
+            imagemArquivo.SaveAs(caminhoImagem);
         }
 
-        //baixa do pdf
+        /// <summary>
+        /// Método usado para pegar o caminho do diretório onde está a imagem
+        /// </summary>
+        /// <param name="nomeImagem"></param>
+        /// <returns></returns>
+        public string PegarCaminhoImagem(string nomeImagem)
+        {
+            var caminhoBase = Server.MapPath("~/Content/Images");
+            string caminhoImagem = Path.Combine(caminhoBase, Path.GetFileName(nomeImagem));
+
+            return caminhoImagem;
+        }
+
+        /// <summary>
+        /// Método usado para retornar o arquivo a ser baixado pelo usuário
+        /// </summary>
+        /// <param name="workStream"></param>
+        /// <param name="nomeImagem"></param>
+        /// <returns></returns>
         public ActionResult DownloadPDF(MemoryStream workStream, string nomeImagem)
         {
             string contentType = "application/pdf";

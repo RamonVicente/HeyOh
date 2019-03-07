@@ -16,12 +16,11 @@ namespace HeyOh.Models
         public List<Participante> getParticipantesLista([DataType(DataType.MultilineText)] string participantes) {
             List<Participante> participantesLista = new List<Participante>();
 
-            participantes.ToString();
+            //particionar string em linhas
+            //com um loop, inserir cada linha com objeto Participante
+            //add objeto participante a participantesLista
+
             return participantesLista;
-        }
-
-        public void converteParaPDF(){
-
         }
 
     }

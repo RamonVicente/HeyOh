@@ -48,6 +48,7 @@ C:\Users\Ramon\Documents\Even3 Test\HeyOh\HeyOh\bin\roslyn\vbc.rsp
 C:\Users\Ramon\Documents\Even3 Test\HeyOh\HeyOh\bin\roslyn\VBCSCompiler.exe
 C:\Users\Ramon\Documents\Even3 Test\HeyOh\HeyOh\bin\roslyn\VBCSCompiler.exe.config
 C:\Users\Ramon\Documents\Even3 Test\HeyOh\HeyOh\bin\Antlr3.Runtime.dll
+C:\Users\Ramon\Documents\Even3 Test\HeyOh\HeyOh\bin\itextsharp.dll
 C:\Users\Ramon\Documents\Even3 Test\HeyOh\HeyOh\bin\Microsoft.AspNet.TelemetryCorrelation.dll
 C:\Users\Ramon\Documents\Even3 Test\HeyOh\HeyOh\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 C:\Users\Ramon\Documents\Even3 Test\HeyOh\HeyOh\bin\Microsoft.Web.Infrastructure.dll
@@ -61,6 +62,7 @@ C:\Users\Ramon\Documents\Even3 Test\HeyOh\HeyOh\bin\System.Web.WebPages.Deployme
 C:\Users\Ramon\Documents\Even3 Test\HeyOh\HeyOh\bin\System.Web.WebPages.dll
 C:\Users\Ramon\Documents\Even3 Test\HeyOh\HeyOh\bin\System.Web.WebPages.Razor.dll
 C:\Users\Ramon\Documents\Even3 Test\HeyOh\HeyOh\bin\WebGrease.dll
+C:\Users\Ramon\Documents\Even3 Test\HeyOh\HeyOh\bin\itextsharp.xml
 C:\Users\Ramon\Documents\Even3 Test\HeyOh\HeyOh\bin\System.Web.Helpers.xml
 C:\Users\Ramon\Documents\Even3 Test\HeyOh\HeyOh\bin\System.Web.Mvc.xml
 C:\Users\Ramon\Documents\Even3 Test\HeyOh\HeyOh\bin\System.Web.Optimization.xml
@@ -80,10 +82,7 @@ C:\Users\Ramon\Documents\Even3 Test\HeyOh\HeyOh\bin\pt-br\System.Web.Razor.resou
 C:\Users\Ramon\Documents\Even3 Test\HeyOh\HeyOh\bin\pt-br\System.Web.WebPages.resources.dll
 C:\Users\Ramon\Documents\Even3 Test\HeyOh\HeyOh\bin\pt-br\System.Web.WebPages.Deployment.resources.dll
 C:\Users\Ramon\Documents\Even3 Test\HeyOh\HeyOh\bin\pt-br\System.Web.WebPages.Razor.resources.dll
-C:\Users\Ramon\Documents\Even3 Test\HeyOh\HeyOh\obj\Debug\HeyOh.csprojAssemblyReference.cache
 C:\Users\Ramon\Documents\Even3 Test\HeyOh\HeyOh\obj\Debug\HeyOh.csproj.CoreCompileInputs.cache
 C:\Users\Ramon\Documents\Even3 Test\HeyOh\HeyOh\obj\Debug\HeyOh.csproj.CopyComplete
 C:\Users\Ramon\Documents\Even3 Test\HeyOh\HeyOh\obj\Debug\HeyOh.dll
 C:\Users\Ramon\Documents\Even3 Test\HeyOh\HeyOh\obj\Debug\HeyOh.pdb
-C:\Users\Ramon\Documents\Even3 Test\HeyOh\HeyOh\bin\itextsharp.dll
-C:\Users\Ramon\Documents\Even3 Test\HeyOh\HeyOh\bin\itextsharp.xml

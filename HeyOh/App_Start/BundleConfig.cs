@@ -14,11 +14,8 @@ namespace HeyOh
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
                       "~/Scripts/bootstrap.js"));
 
-            bundles.Add(new ScriptBundle("~/bundles/image-uploader").Include(
-                "~/Scripts/image-uploader.js"));
-
-            bundles.Add(new ScriptBundle("~/bundles/fabric").Include(
-                "~/Scripts/fabric.min.js"));
+            bundles.Add(new ScriptBundle("~/bundles/cracha-app").Include(
+                "~/Scripts/cracha-app.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
