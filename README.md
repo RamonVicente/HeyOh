@@ -4,8 +4,11 @@ Uma sistema de geração de crachás para eventos.
 COMO USAR:
 Projeto foi feito com o Visual Studio 2017
 1 - Clone o projeto;
+
 2 - No visual studio vá em Arquivo -> Abrir -> Projeto/Solução
+
 3 - Clique no arquivo HeyOh.sln
+
 4 - Após abrir, clique no IIS Express para abrir o sistema no navegador.
 
 Problemas e impedimentos:
